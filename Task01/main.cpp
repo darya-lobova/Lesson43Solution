@@ -17,5 +17,10 @@ int main() {
 	print("Result array:\n");
 	print(convert(array, length) + "\n");
 
+	int value = 0;
+
+	bool result = search_linear(array, length, value);
+	print(result ? "Yes" : "No");
+
 	return 0;
 }
