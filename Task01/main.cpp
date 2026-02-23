@@ -4,7 +4,7 @@ int main() {
 	int array[DEFAULT_SIZE];
 
 	int length;
-	int a = -20, b = 20;
+	int a = 0, b = 20;
 
 	do {
 		cout << "Input size of array: ";
@@ -17,10 +17,16 @@ int main() {
 	print("Result array:\n");
 	print(convert(array, length) + "\n");
 
-	int value = 0;
+	int value = 17;
 
 	bool result = search_linear(array, length, value);
-	print(result ? "Yes" : "No");
+
+	print(result ? "Yes\n" : "No\n");
+
+	print("Index of first element: " + to_string(get_first_element(array, length, value)) + "\n");
+	print("Index of last element: " + to_string(get_last_element(array, length, value)) + "\n");
+
+	print("Count of searching element is: " + to_string(count_element(array, length, value)) + "\n");
 
 	return 0;
 }
